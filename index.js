@@ -45,7 +45,14 @@ VSX.prototype.getOn = function(callback) {
         client.destroy();
         callback(null,on);
         
-      } else if (str.includes("PWR0")) {
+      } else if (str.includes("PWR2")) {
+        console.log("Pioneer OFf");
+        var on = false;
+        client.destroy();
+        callback(null,on);
+        
+      }
+      else if (str.includes("PWR0")) {
         console.log("Pioneer On");
         var on = true;
         client.destroy();
